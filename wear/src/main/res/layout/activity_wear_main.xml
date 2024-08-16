@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".activities.WearMainActivity"
+    android:background="@color/background"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:layout_boxedEdges="all">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/water_intake_tracker"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/wear_title_text_size" />
+
+                <TextView
+                    android:id="@+id/waterIntakeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/wear_water_intake_text_size"
+                    android:textColor="@color/text_primary"
+                    tools:text="1000" />
+
+                <TextView
+                    android:id="@+id/millilitersText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/wear_margin"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    tools:text="ml" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addWaterButton"
+                    android:layout_width="103dp"
+                    android:layout_height="26dp"
+                    android:layout_marginBottom="@dimen/wear_margin"
+                    android:background="@drawable/btn2_background"
+                    android:text="@string/add_water"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/startReminderButton"
+                    android:layout_width="103dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/start_reminders"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>
